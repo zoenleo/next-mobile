@@ -21,7 +21,7 @@ export default function Home(): ReactElement {
         <div className={styles.desc}>
           <p>A next.js template for mobile!</p>
           <p>
-            <a href="./">Get Start!</a>
+            <a href="https://github.com/zoenleo/next-mobile">Get Start!</a>
           </p>
         </div>
       </div>
