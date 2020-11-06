@@ -1,0 +1,84 @@
+
+// 细边框
+@mixin slim-border(
+  $position: top,
+  $length: 100%,
+  $align: center,
+  $color: #efefef
+) {
+  position: relative;
+  @if $position == top or $position == left {
+    &::before {
+      display: inline-block;
+      content: '';
+      background-color: $color;
+      position: absolute;
+      z-index: 1;
+    }
+  }
+  @if $position == bottom or $position == right {
+    &::after {
+      display: inline-block;
+      content: '';
+      background-color: $color;
+      position: absolute;
+      z-index: 1;
+    }
+  }
+  @if $position == top {
+    &::before {
+      width: $length;
+      height: 1px;
+      transform: scaleY(0.5);
+      top: 0;
+      @if $align == left or $align == right {
+        #{$align}: 0;
+      } @else {
+        left: 50%;
+        transform: scaleY(0.5) translateX(-50%);
+      }
+    }
+  }
+  @if $position == bottom {
+    &::after {
+      width: $length;
+      height: 1px;
+      transform: scaleY(0.5);
+      bottom: 0;
+      @if $align == left or $align == right {
+        #{$align}: 0;
+      } @else {
+        left: 50%;
+        transform: scaleY(0.5) translateX(-50%);
+      }
+    }
+  }
+  @if $position == left {
+    &::before {
+      width: 1px;
+      height: $length;
+      transform: scaleX(0.5);
+      left: 0;
+      @if $align == top or $align == bottom {
+        #{$align}: 0;
+      } @else {
+        top: 50%;
+        transform: scaleX(0.5) translateY(-50%);
+      }
+    }
+  }
+  @if $position == right {
+    &::after {
+      width: 1px;
+      height: $length;
+      transform: scaleX(0.5);
+      right: 0;
+      @if $align == top or $align == bottom {
+        #{$align}: 0;
+      } @else {
+        top: 50%;
+        transform: scaleX(0.5) translateY(-50%);
+      }
+    }
+  }
+}

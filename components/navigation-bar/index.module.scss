@@ -1,0 +1,23 @@
+.navigationBar {
+  display: flex;
+  width: 100%;
+  height: 88px;
+  overflow: auto;
+  background-color: $color-background;
+  align-items: center;
+  @include slim-border(bottom);
+  .left {
+    flex: 0;
+    padding: 0 20px;
+    .leftArrow {
+      font-size: 30px;
+    }
+  }
+  .title {
+    flex: 1;
+    font-size: $font-size-md;
+  }
+  .right {
+    flex: 0;
+  }
+}

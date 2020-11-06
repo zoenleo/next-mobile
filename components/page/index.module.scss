@@ -1,0 +1,16 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  .header {
+    flex: 0;
+  }
+  .content {
+    flex: 1;
+    overflow: auto;
+  }
+  .footer {
+    flex: 0;
+  }
+}

@@ -1,0 +1,16 @@
+.container {
+  text-align: center;
+  .title {
+    padding: 300px 30px 60px;
+    font-size: $font-size-lg;
+    color: $color-accent;
+  }
+
+  .desc {
+    font-size: $font-size-bs;
+    a {
+      color: $color-text-link;
+    }
+  }
+}
+
